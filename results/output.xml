@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-10-22T14:39:27.324984" rpa="false" schemaversion="5">
+<suite id="s1" name="CA test automation framework" source="D:\Users\PSK\CA_project\CA_test_automation_framework">
+<suite id="s1-s1" name="Tests" source="D:\Users\PSK\CA_project\CA_test_automation_framework\tests">
+<suite id="s1-s1-s1" name="MyFristTest" source="D:\Users\PSK\CA_project\CA_test_automation_framework\tests\MyFristTest.robot">
+<test id="s1-s1-s1-t1" name="Open Demo App" line="17">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>appWaitActivity=${APP_WAIT}</arg>
+<arg>fullReset=true</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-10-22T14:39:28.028914" elapsed="18.066539"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T14:39:51.117560" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T14:39:46.108476" elapsed="5.012075"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-10-22T14:39:51.124402" elapsed="1.878342"/>
+</kw>
+<status status="PASS" start="2025-10-22T14:39:28.024598" elapsed="24.982086"/>
+</test>
+<doc>Test suite pour login avec définition de keywords</doc>
+<status status="PASS" start="2025-10-22T14:39:27.383537" elapsed="25.667064"/>
+</suite>
+<status status="PASS" start="2025-10-22T14:39:27.367459" elapsed="25.711376"/>
+</suite>
+<status status="PASS" start="2025-10-22T14:39:27.332948" elapsed="25.764844"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="CA test automation framework" id="s1" pass="1" fail="0" skip="0">CA test automation framework</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">CA test automation framework.Tests</stat>
+<stat name="MyFristTest" id="s1-s1-s1" pass="1" fail="0" skip="0">CA test automation framework.Tests.MyFristTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
