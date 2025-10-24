@@ -1,3 +1,0 @@
-- id ok/pwd ko
-- id ko/pwd ok
-- id ko/pwd ko
