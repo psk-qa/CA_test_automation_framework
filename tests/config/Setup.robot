@@ -3,8 +3,8 @@ Documentation     Test suite pour login avec définition de keywords
 Library           AppiumLibrary
 
 *** Variables ***
-${ACCESS_KEY}         4af91dfa-b4ff-4b19-b59d-f0dcce1b5bdd
-${USERNAME}           tteetetetetete
+${ACCESS_KEY}         
+${USERNAME}           
 ${REMOTE_URL}         https://${USERNAME}:${ACCESS_KEY}@ondemand.eu-central-1.saucelabs.com:443/wd/hub
 ${APP}                storage:ea3cb33a-387f-4f41-8953-3155f731572c
 ${DEVICE_NAME}        Samsung.*Galaxy.*
