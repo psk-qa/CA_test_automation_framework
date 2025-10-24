@@ -3,10 +3,10 @@ Documentation     Test suite pour login avec définition de keywords
 Library           AppiumLibrary
 
 *** Variables ***
-${ACCESS_KEY}         47ef4602-e952-4931-bec9-4c305e306776
-${USERNAME}           test32165461561
+${ACCESS_KEY}         4af91dfa-b4ff-4b19-b59d-f0dcce1b5bdd
+${USERNAME}           tteetetetetete
 ${REMOTE_URL}         https://${USERNAME}:${ACCESS_KEY}@ondemand.eu-central-1.saucelabs.com:443/wd/hub
-${APP}                storage:f0a08710-1518-4b6c-a9b9-4d3faa32a476
+${APP}                storage:ea3cb33a-387f-4f41-8953-3155f731572c
 ${DEVICE_NAME}        Samsung.*Galaxy.*
 ${PLATFORM_VERSION}   15
 ${AUTOMATION_NAME}    UiAutomator2
@@ -16,18 +16,16 @@ ${NEW_COMMAND_TIMEOUT}     300
 ${SESSION_NAME}       MobileDemoAppTest
 ${SESSION_RETRY}      2
 ${SESSION_TIMEOUT}    300000
-
-*** Test Cases ***
-
-
+*** Keywords ***
 Open Demo App
     [Documentation]    Ouvre l'application de démo sur Sauce Labs
-
+    ${TAGS}=    Create List    accessibilite    mobile    android
     ${sauce_options}=    Create Dictionary
     ...    name=${SESSION_NAME}
     ...    sessionCreationRetry=${SESSION_RETRY}
     ...    sessionCreationTimeout=${SESSION_TIMEOUT}
     ...    appiumVersion=latest
+    ...    tags=${TAGS}
 
     Open Application    ${REMOTE_URL}
     ...    platformName=android
@@ -39,6 +37,3 @@ Open Demo App
     ...    appium:appActivity=${APP_ACTIVITY}
     ...    appium:newCommandTimeout=${NEW_COMMAND_TIMEOUT}
     ...    sauce:options=${sauce_options}
-    Sleep    5s
-    Capture Page Screenshot
-    Close Application

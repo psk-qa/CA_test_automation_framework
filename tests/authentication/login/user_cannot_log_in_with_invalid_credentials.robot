@@ -1,6 +1,3 @@
-- id ok/pwd ko
-- id ko/pwd ok
-- id ko/pwd ko
 *** Settings ***
 Documentation     To access the Pacifica mobile application, the user must meet the following conditions:
 ...               The user must be a Credit Agricole customer (an account number is required to identify)
@@ -45,6 +42,9 @@ User cannot log in with wrong credentials - wrong userid and wrong password
 *** Keywords ***
 Given User's account is not locked and is active
     Log    Not implemented yet
+    # là encore on encapsule et on évite l'implémentation technique mélangée
+    # au métier
+    # requete API ? DB ? status account user ? locked active ? 
 
 And User has valid userid
     Log    Not implemented yet
@@ -66,5 +66,3 @@ When User logs in
 
 Then an error message is displayed
     Log    Not implemented yet
-
-
