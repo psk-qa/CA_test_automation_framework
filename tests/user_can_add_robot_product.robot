@@ -1,10 +1,8 @@
 *** Settings ***
 Documentation     User should be able to add a product to the basket
-Resource          config/Setup.robot
-Resource          config/Teardown.robot
+Resource          ../resources/keywords/flow_basket.robot
+Test Teardown     Navigate to catalog
 
-Test Setup        Open Demo App
-Test Teardown     Close Demo App
 *** Test Cases ***
 User can add a product to basket
     [Documentation]   User should be able to add a product to the basket
@@ -17,7 +15,6 @@ User's basket is empty
     [Documentation]   User basket is empty
     [Teardown]        Capture Page Screenshot
     Verify Basket Is Empty
-    Capture Page Screenshot
 
 User adds product to basket
     [Documentation]   User selects a product and adds it to his basket

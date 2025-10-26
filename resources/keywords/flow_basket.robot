@@ -29,3 +29,7 @@ Remove product from basket
     [Documentation]   Remove a product from user's basket
     Go To Basket
     Click Remove Product
+
+Navigate to catalog
+    [Documentation]   Navigate to the catalog from the menu
+    Open Catalog From Menu

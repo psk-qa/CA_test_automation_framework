@@ -1,12 +1,13 @@
 *** Settings ***
 Documentation     Test suite pour login avec définition de keywords
 Library           AppiumLibrary
-Resource          ../../resources/config_keywords.robot
+Resource          ../config_keywords.robot
+
 *** Variables ***
-${ACCESS_KEY}         
-${USERNAME}           
+${ACCESS_KEY}         f08136a7-520c-4020-a0c4-cfb711deb379
+${USERNAME}           test12346777777
 ${REMOTE_URL}         https://${USERNAME}:${ACCESS_KEY}@ondemand.eu-central-1.saucelabs.com:443/wd/hub
-${APP}                storage:ea3cb33a-387f-4f41-8953-3155f731572c
+${APP}                storage:4c885e95-4cc0-41fa-a43a-b0d138ec2500
 ${DEVICE_NAME}        Samsung.*Galaxy.*
 ${PLATFORM_VERSION}   15
 ${AUTOMATION_NAME}    UiAutomator2
@@ -16,6 +17,7 @@ ${NEW_COMMAND_TIMEOUT}     300
 ${SESSION_NAME}       MobileDemoAppTest
 ${SESSION_RETRY}      2
 ${SESSION_TIMEOUT}    300000
+
 *** Keywords ***
 Open Demo App
     [Documentation]    Ouvre l'application de démo sur Sauce Labs

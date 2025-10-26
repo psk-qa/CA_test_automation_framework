@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Keywords related to basket operations
 Library           AppiumLibrary
-Resource          ../locators.robot
+Resource          locators.robot
 
 *** Keywords ***
 Go To Basket
@@ -27,9 +27,13 @@ Click Add Product
 
 Get Product
     [Documentation]   Retrieve the list of product elements available for selection
-    ${article}=    Get WebElements            ${ARTICLE_ITEM}
-    AppiumLibrary.Click Element               ${article}[0]
+    AppiumLibrary.Click Element               ${ARTICLE_ITEM}
 
 Click Remove Product
     [Documentation]   Remove a product from the user's basket
     AppiumLibrary.Click Element               ${BTN_REMOVE_ARTICLE}
+
+Open Catalog From Menu
+    [Documentation]   Open the catalog from the menu
+    AppiumLibrary.Click Element               ${BTN_MENU}
+    AppiumLibrary.Click Element               ${BTN_CATALOG}
