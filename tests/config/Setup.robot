@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Test suite pour login avec définition de keywords
 Library           AppiumLibrary
-
+Resource          ../../resources/config_keywords.robot
 *** Variables ***
 ${ACCESS_KEY}         
 ${USERNAME}           

@@ -6,5 +6,4 @@ Library           AppiumLibrary
 Close Demo App
     [Documentation]    Ouvre l'application de démo sur Sauce Labs
     Sleep    5s
-    Capture Page Screenshot
     Close Application
