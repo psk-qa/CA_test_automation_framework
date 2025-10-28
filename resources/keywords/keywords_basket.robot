@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Keywords related to basket operations
 Library           AppiumLibrary
-Resource          locators.robot
+Resource          ../locators.robot
 
 *** Keywords ***
 Go To Basket

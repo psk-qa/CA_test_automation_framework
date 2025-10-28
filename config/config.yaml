@@ -1,0 +1,14 @@
+username: USERNAME
+access_key: ACCESS_KEY
+remote_url: "https://ondemand.eu-central-1.saucelabs.com:443/wd/hub"
+app: storage:APP_ID
+device_name: Samsung_Galaxy_S23_FE_free
+platform_version: 15
+automation_name: UiAutomator2
+app_package: com.saucelabs.mydemoapp.android
+app_activity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+new_command_timeout: 300
+session_name: MobileDemoAppTest
+build: MyApp_Build_1.0
+session_retry: 2
+session_timeout: 300000

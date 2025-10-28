@@ -10,7 +10,6 @@ User can delete a product from basket
     When User remove product from basket
     Then product is removed from User's basket
     
-
 *** Keywords ***
 User's basket is not empty
     [Documentation]   User basket is not empty

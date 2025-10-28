@@ -1,41 +1,28 @@
 *** Settings ***
-Documentation     Test suite pour login avec définition de keywords
-Library           AppiumLibrary
-Resource          ../config_keywords.robot
-
-*** Variables ***
-${ACCESS_KEY}         f08136a7-520c-4020-a0c4-cfb711deb379
-${USERNAME}           test12346777777
-${REMOTE_URL}         https://${USERNAME}:${ACCESS_KEY}@ondemand.eu-central-1.saucelabs.com:443/wd/hub
-${APP}                storage:4c885e95-4cc0-41fa-a43a-b0d138ec2500
-${DEVICE_NAME}        Samsung.*Galaxy.*
-${PLATFORM_VERSION}   15
-${AUTOMATION_NAME}    UiAutomator2
-${APP_PACKAGE}        com.saucelabs.mydemoapp.android
-${APP_ACTIVITY}       com.saucelabs.mydemoapp.android.view.activities.SplashActivity
-${NEW_COMMAND_TIMEOUT}     300
-${SESSION_NAME}       MobileDemoAppTest
-${SESSION_RETRY}      2
-${SESSION_TIMEOUT}    300000
+Variables    ../../config/config_manager.py
+Library      AppiumLibrary
+Resource     ../config_keywords.robot
 
 *** Keywords ***
 Open Demo App
-    [Documentation]    Ouvre l'application de démo sur Sauce Labs
     ${TAGS}=    Create List    accessibilite    mobile    android
-    ${sauce_options}=    Create Dictionary
-    ...    name=${SESSION_NAME}
-    ...    sessionCreationRetry=${SESSION_RETRY}
-    ...    sessionCreationTimeout=${SESSION_TIMEOUT}
+    ${SAUCE_OPTIONS}=    Create Dictionary
+    ...    username=${username}
+    ...    accessKey=${access_key}
+    ...    name=${session_name}
+    ...    build=${build}
+    ...    sessionCreationRetry=${session_retry}
+    ...    sessionCreationTimeout=${session_timeout}
     ...    appiumVersion=latest
     ...    tags=${TAGS}
 
-    Open Application    ${REMOTE_URL}
+    Open Application    ${remote_url}
     ...    platformName=android
-    ...    appium:app=${APP}
-    ...    appium:deviceName=${DEVICE_NAME}
-    ...    appium:platformVersion=${PLATFORM_VERSION}
-    ...    appium:automationName=${AUTOMATION_NAME}
-    ...    appium:appPackage=${APP_PACKAGE}
-    ...    appium:appActivity=${APP_ACTIVITY}
-    ...    appium:newCommandTimeout=${NEW_COMMAND_TIMEOUT}
-    ...    sauce:options=${sauce_options}
+    ...    appium:app=${app}
+    ...    appium:deviceName=${device_name}
+    ...    appium:platformVersion=${platform_version}
+    ...    appium:automationName=${automation_name}
+    ...    appium:appPackage=${app_package}
+    ...    appium:appActivity=${app_activity}
+    ...    appium:newCommandTimeout=${new_command_timeout}
+    ...    sauce:options=${SAUCE_OPTIONS}
