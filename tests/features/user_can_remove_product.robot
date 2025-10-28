@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     User should be able to remove a product from his basket
-Resource          ../resources/keywords/flow_basket.robot
+Resource          ../../resources/keywords/flow_basket.robot
 Test Teardown     Navigate to catalog
 
 *** Test Cases ***
