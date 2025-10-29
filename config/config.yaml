@@ -1,7 +1,7 @@
-username: USERNAME
-access_key: ACCESS_KEY
+username: JohnDoe123456798798
+access_key: 1b5c8c9c-65f5-43bb-b0dd-7aa1705de67b
 remote_url: "https://ondemand.eu-central-1.saucelabs.com:443/wd/hub"
-app: storage:APP_ID
+app: storage:1acd046b-a3c1-4e22-95fb-684fb1e5eb4f
 device_name: Samsung_Galaxy_S23_FE_free
 platform_version: 15
 automation_name: UiAutomator2
